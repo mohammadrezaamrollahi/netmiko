@@ -10,7 +10,10 @@ cisco_881 = {
 }
 #Establish an SSH connection to the device by passing in the device dictionary.
 net_connect = ConnectHandler(**cisco_881)
+
 #Execute configuration change commands (will automatically enter into config mode)
+
+#output = net_connect.send_command('show ip int brief')
 config_commands = [ 'interface loopback 0',
                     '............',
                     'do show ip interface br | exc una' ]
